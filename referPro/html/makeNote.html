@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta charset="utf-8">
+	<meta name="author" content="高级前端工程师--喻文强"/>
+	<meta name="keywords" content="炒股秘籍，股牛根据地，什么股最挣钱，想炒股看这里！"/>
+	<meta name="description" content="为了帮助广大股民更清晰明确的掌握优质股咨询，也为了提供给股牛一个出名崛起的机会，我们打造了一个全新的股民平台，只要你有想法，只要你的判断够给力，月入零花钱七八万没有问题，你问我好玩好出名又挣钱的好事哪里找？不着急，快来聚焦牛股来报到！"/>
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>写笔记</title>
+    <!--aui样式表-->
+    <link rel="stylesheet" type="text/css" href="../aui/css/aui.2.0.css" />
+    <!--swiper样式表-->
+    <link rel="stylesheet" type="text/css" href="../plugin/swiper/css/swiper.min.css"/>
+    <!--喻文强对swiper样式的修复-->
+    <link rel="stylesheet" type="text/css" href="../css/yuwqSwiper-repair.css"/>
+    <!--聚焦牛股整站的css样式表-->
+    <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+    <!--喻文强的相应式布局的css-->
+    <link rel="stylesheet" type="text/css" href="../css/yuwqResponsive.css"/>
+ 
+    
+</head>
+<body>
+	
+	<div class="yuwq-list-info yuwq-stock-import"><span class="leftTitle">股票</span><input type="text" placeholder="股票代码/拼音首字母"></div><!--股票输入及匹配-->
+	<div class="yuwq-stock-tip"><font class="stockInexistence">股票不存在!</font></div><!--股票提示-->
+	<div class="yuwq-list-info yuwq-expected-time"><span class="leftTitle">预期</span>
+		<select id="demo_select1">
+            
+            <option value="1" selected="selected">1日</option>
+            <option value="2">2日</option>
+            <option value="3">3日</option>
+            <option value="4">4日</option>
+            <option value="5">5日</option>
+            <option value="6">6日</option>
+            <option value="7">7日</option>
+            <option value="8">8日</option>
+            <option value="9">9日</option>
+            <option value="10">10日</option>
+            <option value="11">11日</option>
+            <option value="12">12日</option>
+            <option value="13">13日</option>
+            <option value="14">14日</option>
+            <option value="15">15日</option>
+            <option value="20">20日</option>
+            <option value="25">25日</option>
+            <option value="30">30日</option>
+            <option value="35">35日</option>
+            <option value="40">40日</option>
+            <option value="45">45日</option>
+            <option value="60">60日</option>
+            
+        </select>
+		<i class="yuwq-bottomArrows"></i>
+	</div><!--预期时间-->
+
+	<div class="yuwq-list-info yuwq-rise"><span class="leftTitle">上涨</span><input type="number" placeholder="例：13.5-210"/><span class="unit">%</span></div><!--涨幅-->
+	
+	<div class="yuwq-time-calculation"><font>08月30日上午起算，T+1日开始判定是否达标</font></div><!--起止时间算法提示-->
+	<div class="yuwq-list-info yuwq-stockNote-title"><span class="leftTitle">标题</span><input type="text" maxlength="8" placeholder="1-8字，例：实力放股潜力极佳"></div><!--股票笔记标题-->
+	<div class="yuwq-list-info yuwq-stockNote-logic"><span class="leftTitle">逻辑</span><textarea type="text" placeholder="请写下投资逻辑，10-300字。清晰的逻辑判断会获得较多的打赏，达标后更有机会被选为精选"></textarea></div><!--逻辑判断-->
+
+	<div class="yuwq-list-info yuwq-stock-bidPrice"><span class="leftTitle">标价</span>
+		<select id="demo_select2">
+            
+            <option value="0">免费</option>
+            <option value="3">3元</option>
+            <option value="5">5元</option>
+            <option value="8">8元</option>
+            <option value="10" selected="selected">10元</option>
+            <option value="12">12元</option>
+            <option value="15">15元</option>
+            <option value="20">20元</option>
+            <option value="25">25元</option>
+            <option value="50">50元</option>
+            <option value="100">100元</option>
+            <option value="200">200元</option>
+            
+        </select>
+		<i class="yuwq-bottomArrows"></i>
+	</div><!--笔记标价-->
+	
+	<div class="yuwq-bidPrice-explain">您同时需准备一份等额红包，当未达目标时分给读者</div><!--标价注解，解释标价有什么用-->
+	
+	<a href=""><div class="yuwq-noteIssue">发布</div></a><!--笔记发布按钮-->
+	
+	<div style="height: 56px;"></div><!--撑起部分-->
+	
+	<footer class="yuwq-footer-navBar">
+	    
+	    <a href="../index.html">
+	    	<div class="navTab-item navTap-index">
+		    	<i class="navTab-icon"></i>
+		        <div class="navTab-label">首页</div>
+		    </div>
+	    </a>
+	    
+	    <a href="myConcerns.html">
+	    	<div class="navTab-item navTap-attention">
+		    	<i class="navTab-icon"></i>
+		        <div class="navTab-label">关注</div>
+		    </div>
+	    </a>
+	    
+	    <a href="makeNote.html">
+		    <div class="navTab-item navTap-makeNode current">
+		    	<i class="navTab-icon"></i>
+		        <div class="navTab-label">写笔记</div>
+		    </div>
+	    </a>
+	    
+	    <a href="weekly-rankingList.html">
+	    	<div class="navTab-item navTap-ranking">
+		    	<i class="navTab-icon"></i>
+		        <div class="navTab-label">周榜</div>
+		    </div>
+	    </a>
+	    
+	    <a href="userCenter.html">
+	    	<div class="navTab-item navTap-me">
+		    	<i class="navTab-icon"></i>
+		        <div class="navTab-label">我</div>
+		    </div>
+	    </a>
+	    
+	</footer><!--喻文强的底部控制去-->
+	
+	<!--引入jQ的脚本文件-->
+	<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<!--swiper插件的脚本文件-->
+	<script src="../plugin/swiper/js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+	<!--引入mobiscroll下拉插件-->
+	<link href="../plugin/mobiscroll/mobiscroll.min.css" rel="stylesheet" type="text/css" />
+    <script src="../plugin/mobiscroll/mobiscroll.min.js" type="text/javascript"></script>
+	
+	<script>
+        $(function(){
+        	
+        	/*mobiscroll初始化绑定*/
+            $('#demo_select1').mobiscroll().select({
+            	
+                theme: "mobiscroll",   
+                mode: "scroller",  
+                display: "bottom",  
+                lang: "zh"
+                
+            });
+            
+            $('#demo_select2').mobiscroll().select({
+            	
+                theme: "mobiscroll",   
+                mode: "scroller",  
+                display: "bottom",  
+                lang: "zh"
+                
+            });
+            
+        });
+    </script>
+	
+</body>
+</html>

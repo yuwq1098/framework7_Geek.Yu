@@ -1,0 +1,310 @@
+@charset "utf-8";
+
+
+/*仅320px屏，代表iphone4s*/
+@media only screen and (width:320px ){
+	
+	.swiper-container{
+        	
+		height: 122px;
+		
+	}
+	
+	.yuwq-header-navBar{
+		
+		height: 31px;
+		line-height: 31px;
+		
+	}
+	
+	.yuwq-header-navBar .yuwq-navTabs{
+		
+		font-size: 15px;
+		
+	}
+	
+	
+	.yuwq-weekRank-header{
+	
+		height: 150px;
+		
+	}
+	
+	.yuwq-weekRank-header .weekRank-statement p{
+	    
+		top: 42%;
+		-webkit-transform: scale(.92);
+		transform: scale(.92);
+		
+	}
+	
+	.yuwq-weekRank-header .baskRank{
+	
+		-webkit-transform: scale(.88);
+		transform: scale(.88);
+		bottom: 5px;
+		
+	}
+	
+	/*喻文强的关注&粉丝*/
+	
+	.yuwq-concernsAndFans-item ul li{
+		
+		width: 100%;
+		height: 84px;
+		box-sizing: border-box;
+		padding: 10px 0;
+		padding-left: 48px;
+		position: relative;
+		border-bottom: 1px solid #EBEDEF;
+		
+	}
+	
+	.yuwq-concernsAndFans-item ul li h3{
+		
+		height: 20px;
+		line-height: 22px;
+		
+	}
+	
+	.yuwq-concernsAndFans-item ul li p{
+		
+		height: 44px;
+		line-height: 22px;
+		
+	}
+	
+	.yuwq-concernsAndFans-item ul li p span.last{
+		
+		display: block;
+		
+	}
+	
+	/*修复收益提示*/
+	.yuwq-mask-earningsPrompt .earningsContent{
+	
+		min-width: 260px;
+		height: 200px;
+		transform-origin: center;
+        -webkit-transform: scale(.95);
+        transform: scale(.95);
+		
+	}
+	
+	/*修复账户余额样式*/
+	.yuwq-accountBalance-header{
+		
+		width: 100%;
+		height: 90px;
+		background: -webkit-gradient(linear, 50% 0%,100% 100%, from(#d45),to(rgba(238,102,68,.88)));
+		position: relative;
+		box-sizing: border-box;
+		padding: 8px 10px;
+		
+	}
+	
+	.yuwq-accountBalance-header .balance{
+	
+		height: 48px;
+		line-height: 48px;
+		margin-top: 4px;
+		letter-spacing: 2px;
+		color: rgba(255,255,255,.95);
+		font-size: 44px;
+		text-shadow: -2px 2px 2px rgba(0,0,0,.20);
+		
+	}
+	
+}
+
+
+/*仅320px*568px屏，代表iphone5*/
+@media only screen and (width:320px ) and (height:568px) {
+	
+	
+	
+}
+
+
+/*不是小于等于320px宽屏的移动设备，等价于大于且不等于320px屏，*/
+@media not screen and (max-width:320px) {
+	
+	
+	
+}
+
+
+/*大于且等于360px屏, 代表Galaxy S5,Galaxy Note3*/
+@media screen and (min-width:360px ) {
+	
+	.swiper-container{
+        	
+		height: 142px;
+		
+	}
+	
+	.yuwq-header-navBar{
+		
+		height: 36px;
+		line-height: 36px;
+		
+		
+	}
+	
+	
+	.yuwq-weekRank-header{
+	
+		height: 156px;
+		
+	}
+	
+	.yuwq-weekRank-header .weekRank-statement p{
+	    
+		top: 45%;
+		-webkit-transform: scale(.92);
+		transform: scale(.92);
+		
+	}
+	
+	.yuwq-weekRank-header .baskRank{
+	
+		-webkit-transform: scale(.88);
+		transform: scale(.88);
+		bottom: 5px;
+		
+	}
+	
+	.yuwq-mask-earningsPrompt .earningsContent{
+	
+		min-width: 268px;
+		height: 200px;
+		transform-origin: center;
+        -webkit-transform: scale(.95);
+        transform: scale(.95);
+		
+	}
+	
+}
+
+/*大于且等于375px屏, 代表iphone 6*/
+@media screen and (min-width:375px ) {
+
+	.yuwq-myRecharge-content ul.moneyList li{
+	
+		height: 48px;
+		padding: 6px;
+		
+	}
+	
+	.yuwq-myRecharge-content ul.moneyList li section{
+	
+		height: 36px;
+		line-height: 36px;
+		font-size: 14px;
+		
+	}
+	
+	.yuwq-myRecharge-content ul.moneyList li input{
+		
+		height: 36px;
+		line-height: 36px;
+		font-size: 14px;
+		
+	}
+	
+}
+
+/*大于且等于400px屏, 代表Nexus 5X,Nexus 6P,iphone 6 Plus*/
+@media screen and (min-width:400px ) {
+	
+	.swiper-container{
+        	
+		height: 158px;
+		
+	}
+	
+	.yuwq-header-navBar{
+		
+		height: 40px;
+		line-height: 40px;
+		
+	}
+	
+	.yuwq-header-navBar .yuwq-navTabs{
+		
+		font-size: 17px;
+		
+	}
+	
+	.yuwq-weekRank-header{
+	
+		height: 170px;
+		
+	}
+	
+	.yuwq-weekRank-header .weekRank-statement p{
+	    
+		top: 52%;
+		-webkit-transform: scale(.92);
+		transform: scale(.92);
+		
+	}
+	
+	.yuwq-weekRank-header .baskRank{
+	
+		-webkit-transform: scale(.94);
+		transform: scale(.94);
+		bottom: 5px;
+		
+	}
+	
+}
+
+
+/*大于且等于768px屏, 代表iPad MINI,iPad*/
+@media screen and (min-width:768px ) {
+	
+	
+	
+}
+
+/*高度大于且等于550px*/
+@media screen and (min-height:550px ) {
+	
+	footer.yuwq-aboutUs-attention{
+	    
+	    width: 100%;
+	    position: fixed;
+	    bottom: 8px;
+	    left: 0;
+		height: 20px;
+		line-height: 20px;
+		text-align: center;
+		font-size: 12px;
+		letter-spacing: 1px;
+		text-indent: 1px;
+		color: #393A3F;
+		-webkit-transform: scale(.88);
+	    transform: scale(.88);
+		
+	}
+
+    .yuwq-feedBack-submit{
+		
+		margin-top: 112px;
+		margin-bottom: 0px;
+		width: 100%;
+		height: 50px;
+		box-sizing: border-box;
+		position: relative;
+		
+	}
+	
+}
+
+/*大于等于320px宽屏的移动设备*/
+@media screen and (min-width:320px ){
+	
+	
+	
+}
