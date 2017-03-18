@@ -1,0 +1,54 @@
+/**********************************************
+    Author: YuWenJiang
+	Create time: the name of 2017-03-18
+	Application: new framework7css frame style and cover part of the style
+
+	作者：喻文强
+	创建时间： 2017-03-18 11:34
+	主要用途： 新增framework7css框架样式及  覆盖部分样式
+
+************************************************/
+
+/*公共组件*/
+a{
+	color: #f34;
+}
+i.icon-large{
+	font-size: 28px;
+}
+i.icon-medium{
+	font-size: 22px;
+}
+.button{
+    border: 1px solid #f34;
+    color: #f34;
+}
+
+.bg-red, .button.button-fill.bg-red, .list-block .swipeout-actions-left a.bg-red, .list-block .swipeout-actions-right a.bg-red, a.bg-red{
+	background-color: #f34;
+}
+
+/*底部导航*/
+.toolbar{
+	background-color: #393a3f;
+	font-size: 18px;
+}
+.tabbar-labels{
+	height: 54px;
+}
+.toolbar a{
+	color: #c2c2c2;
+}
+.toolbar a.active{
+	color: #f34;
+}
+.toolbar-inner{
+	padding: 0 10px;
+}
+.tabbar-labels a.link, .tabbar-labels a.tab-link{
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+.f7-icons .badge, .framework7-icons .badge, .icon .badge{
+	box-shadow: -1px 1px 1px rgba(0,0,0,.2);
+}

@@ -6,11 +6,15 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <title>My App</title>
+    
     <!-- Path to Framework7 Library CSS-->
     <link rel="stylesheet" href="css/framework7.ios.min.css">
     <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
     <!-- 您的自定义应用程序样式-->
     <link rel="stylesheet" href="css/my-app.css">
+    <!-- iconfont引用 -->
+    <link rel="stylesheet" href="font/iconfont.css">
+
   </head>
   <body>
     <!-- 状态栏覆盖为全屏模式-->
@@ -39,7 +43,7 @@
             <!-- 我们家没有留下链接导航-->
             <div class="center sliding">首页</div>
             <div class="right">
-              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>
+              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon iconfont icon-medium icon-leimu"></i></a>
             </div>
           </div>
         </div>
@@ -90,8 +94,31 @@
           </div>
         </div>
         <!-- 底部导航区-->
-        <div class="toolbar">
-          <div class="toolbar-inner"><a href="#" class="link">按钮一</a><a href="#" class="link">按钮二</a></div>
+        <div class="toolbar tabbar tabbar-labels">
+            <div class="toolbar-inner">
+                <a href="#view-1" class="tab-link active">
+                    <i class="icon iconfont icon-ziyuan1"></i>
+                    <span class="tabbar-label">首页</span>
+                </a>
+                <a href="#view-2" class="tab-link">
+                    <i class="icon iconfont icon-mimakejian"></i>
+                    <span class="tabbar-label">关注</span>
+                </a>
+                <a href="#view-3" class="tab-link">
+                    <i class="icon iconfont icon-qiandao">
+                        <span class="badge bg-red">4</span>
+                    </i>
+                    <span class="tabbar-label">写笔记</span>
+                </a>
+                <a href="#view-4" class="tab-link"> 
+                    <i class="icon iconfont icon-ziyuan13"></i>
+                    <span class="tabbar-label">周榜</span>
+                </a>
+                <a href="#view-5" class="tab-link"> 
+                    <i class="icon iconfont icon-iconwonor"></i>
+                    <span class="tabbar-label">我</span>
+                </a>
+            </div>
         </div>
       </div>
     </div>
