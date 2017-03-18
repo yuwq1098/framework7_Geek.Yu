@@ -1,24 +1,24 @@
 // 初始化 应用程序 framework7
 var myApp = new Framework7();
 
-// Export selectors engine
+// 出口选择器引擎定义
 var $$ = Dom7;
 
-// Add view
+// 添加视图
 var mainView = myApp.addView('.view-main', {
-    // Because we use fixed-through navbar we can enable dynamic navbar
+    // 因为我们使用固定通过导航条我们可以启用动态导航
     dynamicNavbar: true
 });
 
-// Callbacks to run specific code for specific pages, for example for About page:
+// 回调为特定页面运行特定的代码,例如关于页面:
 myApp.onPageInit('about', function (page) {
-    // run createContentPage func after link was clicked
+    // 链接被点击后运行createContentPage func
     $$('.create-page').on('click', function () {
         createContentPage();
     });
 });
 
-// Generate dynamic page
+// 生成动态页面
 var dynamicPageIndex = 0;
 function createContentPage() {
 	mainView.router.loadContent(
