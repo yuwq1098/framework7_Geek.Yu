@@ -34,93 +34,193 @@
       </div>
     </div>
     <!-- 视图区-->
-    <div class="views">
-      <!-- 你的主要视图内容,应该含有类名“view-main”-->
-      <div class="view view-main">
-        <!-- 顶部导航条-->
-        <div class="navbar">
-          <div class="navbar-inner">
-            <!-- 我们家没有留下链接导航-->
-            <div class="center sliding">首页</div>
-            <div class="right">
-              <!-- Right link contains only icon - additional "icon-only" class--><a href="#" class="link icon-only open-panel"> <i class="icon iconfont icon-medium icon-leimu"></i></a>
-            </div>
-          </div>
-        </div>
-        <!-- 页面,因为我们需要固定在导航工具栏,它有额外的适当的类-->
-        <div class="pages navbar-through toolbar-through">
-          <!-- 页面,数据页包含页面的名字-->
-          <div data-page="index" class="page">
-            <!-- 可滚动页面内容-->
-            <div class="page-content">
-              <div class="content-block-title">Geek.Yu</div>
-              <div class="content-block">
-                <div class="content-block-inner">
-                  <p>这是个不一样的世界,因我的代码太棒了!</p>
-                  <p>Duis sed erat ac eros ultrices pharetra id ut tellus. Praesent rhoncus enim ornare ipsum aliquet ultricies. Pellentesque sodales erat quis elementum sagittis.</p>
+    <!-- Tabs, now tabs wrapper is "views" -->
+    <div class="views tabs toolbar-fixed">
+        <!-- 默认显示首页视图 -->
+        <div id="home" class="view tab view-main active" data-page="index-1">
+            <div class="navbar">
+                <div class="navbar-inner">
+                  <div class="center">首页</div>
                 </div>
-              </div>
-              <div class="content-block-title">如何进行简单的导航?</div>
-              <div class="list-block">
-                <ul>
-                  <li><a href="about.html" class="item-link">
-                      <div class="item-content">
-                        <div class="item-inner"> 
-                          <div class="item-title">关于我们</div>
-                        </div>
-                      </div></a></li>
-                  <li><a href="services.html" class="item-link">
-                      <div class="item-content"> 
-                        <div class="item-inner">
-                          <div class="item-title">服务条款</div>
-                        </div>
-                      </div></a></li>
-                  <li><a href="form.html" class="item-link">
-                      <div class="item-content"> 
-                        <div class="item-inner">
-                          <div class="item-title">表单</div>
-                        </div>
-                      </div></a></li>
-                </ul>
-              </div>
-              <div class="content-block-title">侧边栏</div>
-              <div class="content-block">
-                <div class="row">
-                  <div class="col-50"><a href="#" data-panel="left" class="button open-panel">触发侧边栏（左）</a></div>
-                  <div class="col-50"><a href="#" data-panel="right" class="button open-panel">触发侧边栏（右）</a></div>
-                </div>
-              </div>
             </div>
-          </div>
+            <div class="pages navbar-fixed">
+                <div data-page="index-1" class="page">
+                    <div class="page-content">
+                        <div class="content-block">
+                            <p>这里是首页视图</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- 底部导航区-->
+        <!-- 关注页面 -->
+        <div id="attention" class="view tab" data-page="index-2">
+            <div class="navbar">
+                <div class="navbar-inner">
+                  <div class="center">关注</div>
+                </div>
+            </div>
+            <div class="pages navbar-fixed">
+                <div data-page="index-2" class="page">
+                    <div class="page-content">
+                        <div class="content-block">
+                            <p>这里是我的关注大咖列表页</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 写笔记页面 -->
+        <div id="write" class="view tab" data-page="index-3">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="center">写笔记</div>
+                </div>
+            </div>
+            <div class="pages navbar-fixed">
+                <div data-page="index-3" class="page">
+                    <div class="page-content">
+                        <div class="content-block">
+                            <p>这里是写笔记的页面</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 周榜 -->
+        <div id="ranking" class="view tab" data-page="index-4">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="center">周榜</div>
+                </div>
+            </div>
+            <div class="pages navbar-fixed">
+                <div data-page="index-4" class="page">
+                    <div class="page-content">
+                        <div class="content-block">
+                            <p>股牛周榜</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 我的个人中心 -->
+        <div id="personal" class="view tab" data-page="index-5">
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="center">我的</div>
+                </div>
+            </div>
+            <div class="pages navbar-fixed">
+                <div data-page="index-5" class="page">
+                    <div class="page-content">
+                        <div class="content-block">
+                            <p>这是我的个人中心</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Framework7 demo -->
+        <div id="example" class="view tab" data-page="index-6">
+            <!-- 顶部导航条-->
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <!-- 我们家没有留下链接导航-->
+                    <div class="center sliding">Framework7 实例</div>
+                    <div class="right">
+                        <!-- Right link contains only icon - additional "icon-only" class-->
+                        <a href="#" class="link icon-only open-panel">
+                            <i class="icon iconfont icon-medium icon-leimu"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- 页面,因为我们需要固定在导航工具栏,它有额外的适当的类-->
+            <div class="pages navbar-through">
+                <!-- 页面,数据页包含页面的名字-->
+                <div data-page="index-6" class="page page-on-center">
+                    <!-- 可滚动页面内容-->
+                    <div class="page-content">
+                        <div class="content-block-title">Geek.Yu</div>
+                        <div class="content-block">
+                            <div class="content-block-inner">
+                              <p>这是个不一样的世界,因我的代码太棒了!</p>
+                              <p>Duis sed erat ac eros ultrices pharetra id ut tellus. Praesent rhoncus enim ornare ipsum aliquet ultricies. Pellentesque sodales erat quis elementum sagittis.</p>
+                            </div>
+                        </div>
+                        <div class="content-block-title">如何进行简单的导航?</div>
+                        <div class="list-block">
+                            <ul>
+                                <li><a href="about.html" class="item-link">
+                                    <div class="item-content">
+                                      <div class="item-inner"> 
+                                        <div class="item-title">关于我们</div>
+                                      </div>
+                                    </div></a></li>
+                                <li><a href="services.html" class="item-link">
+                                    <div class="item-content"> 
+                                      <div class="item-inner">
+                                        <div class="item-title">服务条款</div>
+                                      </div>
+                                    </div></a></li>
+                                <li><a href="form.html" class="item-link">
+                                    <div class="item-content"> 
+                                      <div class="item-inner">
+                                        <div class="item-title">表单</div>
+                                      </div>
+                                    </div></a></li>
+                            </ul>
+                        </div>
+                        <div class="content-block-title">侧边栏</div>
+                        <div class="content-block">
+                            <div class="row">
+                                <div class="col-50">
+                                    <a href="#" data-panel="left" class="button open-panel">触发侧边栏（左）</a>
+                                </div>
+                                <div class="col-50">
+                                    <a href="#" data-panel="right" class="button open-panel">触发侧边栏（右）</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab bar with tab links -->
         <div class="toolbar tabbar tabbar-labels">
             <div class="toolbar-inner">
-                <a href="#view-1" class="tab-link active">
+                <a href="#home" class="tab-link active">
                     <i class="icon iconfont icon-ziyuan1"></i>
                     <span class="tabbar-label">首页</span>
                 </a>
-                <a href="#view-2" class="tab-link">
+                <a href="#attention" class="tab-link">
                     <i class="icon iconfont icon-mimakejian"></i>
                     <span class="tabbar-label">关注</span>
                 </a>
-                <a href="#view-3" class="tab-link">
+                <a href="#write" class="tab-link">
                     <i class="icon iconfont icon-qiandao">
                         <span class="badge bg-red">4</span>
                     </i>
                     <span class="tabbar-label">写笔记</span>
                 </a>
-                <a href="#view-4" class="tab-link"> 
+                <a href="#ranking" class="tab-link"> 
                     <i class="icon iconfont icon-ziyuan13"></i>
                     <span class="tabbar-label">周榜</span>
                 </a>
-                <a href="#view-5" class="tab-link"> 
+                <a href="#personal" class="tab-link"> 
                     <i class="icon iconfont icon-iconwonor"></i>
-                    <span class="tabbar-label">我</span>
+                    <span class="tabbar-label">我的</span>
+                </a>
+                <a href="#example" class="tab-link"> 
+                    <i class="icon iconfont icon-qiapianxingshi"></i>
+                    <span class="tabbar-label">实例</span>
                 </a>
             </div>
         </div>
-      </div>
+     
     </div>
     <!-- 加载 Framework7 脚本-->
     <script type="text/javascript" src="js/framework7.min.js"></script>

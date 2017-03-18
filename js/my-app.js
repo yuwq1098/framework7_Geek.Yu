@@ -10,6 +10,12 @@ var mainView = myApp.addView('.view-main', {
     dynamicNavbar: true
 });
 
+//给Framework7 demo启动动态导航
+var exampleView = myApp.addView('#example', {
+    // Because we use fixed-through navbar we can enable dynamic navbar
+    dynamicNavbar: true
+});
+
 // 回调为特定页面运行特定的代码,例如关于页面:
 myApp.onPageInit('about', function (page) {
     // 链接被点击后运行createContentPage func
