@@ -1,6 +1,6 @@
 /**********************************************
-    Author: YuWenJiang
-	Create time: the name of 2017-03-18
+    Author: Geek.Yu
+	Create time:  2017-03-18 11:34
 	Application: new framework7css frame style and cover part of the style
 
 	作者：喻文强
@@ -22,13 +22,126 @@ i.icon-large{
 i.icon-medium{
 	font-size: 22px;
 }
+em{ font-style: normal; margin: 0 3px; }
+.navbar a{
+	color: #222;
+}
 .button{
     border: 1px solid #f34;
     color: #f34;
 }
+.panel { color: #393a3f; }
+.radius-img{ border-radius: 4px; }
 
 .bg-red, .button.button-fill.bg-red, .list-block .swipeout-actions-left a.bg-red, .list-block .swipeout-actions-right a.bg-red, a.bg-red{
 	background-color: #f34;
+}
+
+.tabbar-fixed .page-content, .tabbar-through .page-content, .toolbar-fixed .page-content, .toolbar-through .page-content{
+    padding-bottom: 54px;
+}
+
+/* 页面下边距，根据底部导航的高度 */
+.pb-toolbar{ padding-bottom: 54px; }
+
+.navbar-through .pt-none{ padding-top: 0; }
+
+/* Multiple Swipers 幻灯片样式*/
+.swiper-slide {
+  background: #fff;
+  box-sizing: border-box;
+}
+.swiper-container {
+  height: 150px;
+}
+.swiper-slide img{
+	width: 100%;
+	height: auto;
+}
+.swiper-slide span {
+  text-align:center;
+  display:block;
+  font-size:21px;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 4px;
+}
+.swiper-pagination-bullet{
+	width:6px;
+	height:6px;
+	background-color:#000;
+}
+.swiper-pagination-bullet-active{
+	background-color: rgba(255,255,255,.84);
+}
+
+/*功能导航区*/
+.content-function{
+	margin: 0;
+	padding: 10px 15px;
+	background-color: #fff;
+}
+.content-functiitem{
+	padding-top: 4px;
+	padding-bottom: 4px;
+	height: 100%;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	color: #393a3f;
+}
+.content-function a.item-link h4,
+.content-function a.item-link p{
+    margin: 4px 0;
+    color: #393a3f;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+	text-indent: 0.1em;
+}
+.content-function a.item-link p{
+    font-size: 10px;
+    color: #6d6d72;
+}
+
+.content-function a.item-link i{
+	width: 42px;
+	height: 42px;
+	margin: 0 auto;
+	background:url(../img/content-function.png) no-repeat;
+	background-size: auto 40px;  
+	height:40px;width:40px;
+	background-position: 0 0;
+	margin-bottom: 8px;
+}
+.content-function a.item-link i.success-rate{
+	background-position: -81px 0;
+}
+.content-function a.item-link i.earnings-day{
+	background-position: -122px 0;
+}
+.content-function a.item-link i.earnings-all{
+	background-position: 0 0;
+}
+.content-function a.item-link i.prefecture-free{
+	background-position: -40.5px 0;
+}
+
+.content-function a.item-link span{
+	margin: 0;
+	color: #393a3f;
+}
+.content-function span.tabbar-label {
+	line-height: 1;
+	display: block;
+	margin: 0;
+	letter-spacing: 0.1em;
+	text-indent: 0.1em;
+	font-size: 13px;
+	position: relative;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 /*底部导航*/
@@ -55,3 +168,22 @@ i.icon-medium{
 .f7-icons .badge, .framework7-icons .badge, .icon .badge{
 	box-shadow: -1px 1px 1px rgba(0,0,0,.2);
 }
+
+
+/*个人中心*/
+.info-block{
+	margin: 0;
+	border-bottom: 0.5px solid #efeff4;
+}
+.info-block.media-list .item-media{
+    padding-top: 0;
+}
+.info-block li .item-media img{
+	width: 58px;
+	height: 58px;
+
+}
+
+
+
+
