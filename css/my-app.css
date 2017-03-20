@@ -128,6 +128,9 @@ em{ font-style: normal; margin: 0 3px; }
 	justify-content: space-between;
 	color: #393a3f;
 }
+.content-function a.item-link{
+	display: block;
+}
 .content-function a.item-link h4,
 .content-function a.item-link p{
     margin: 4px 0;
