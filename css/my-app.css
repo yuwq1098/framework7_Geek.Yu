@@ -16,12 +16,13 @@ body{
 a{
 	color: #f34;
 }
-i.icon-large{
-	font-size: 28px;
-}
-i.icon-medium{
-	font-size: 22px;
-}
+.size-13, i.size-13 { font-size: 13px; }
+.size-16, i.size-16 { font-size: 16px; }
+.size-18, i.size-18 { font-size: 18px; }
+.size-22, i.size-22 { font-size: 22px }
+.size-25, i.size-25 { font-size: 25px }
+.size-29, i.size-29 { font-size: 29px }
+.size-50, i.size-50 { font-size: 50px }
 em{ font-style: normal; margin: 0 3px; }
 .navbar a{
 	color: #222;
@@ -46,7 +47,7 @@ em{ font-style: normal; margin: 0 3px; }
 
 .navbar-through .pt-none{ padding-top: 0; }
 
-/* Multiple Swipers 幻灯片样式*/
+/* 首页轮播图 幻灯片样式*/
 .swiper-slide {
   background: #fff;
   box-sizing: border-box;
@@ -74,6 +75,41 @@ em{ font-style: normal; margin: 0 3px; }
 }
 .swiper-pagination-bullet-active{
 	background-color: rgba(255,255,255,.84);
+}
+
+/*首页导航nav*/
+.index-navbar{
+	background-color: rgba(0,0,0,.2);
+	border: none;
+	width: 100%;
+	height: 38px;
+	line-height: 38px;
+	color: #f7f7f7;
+	font-size: 14px;
+	letter-spacing: .15em;
+	text-indent: .15em;
+	position: fixed;
+	top: 0;
+	left: 0;
+	box-sizing: border-box
+	margin: 0;
+    z-index: 500;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);;
+}
+.index-navbar::after{
+	display: none;
+}
+.index-navbar a{
+	color: #f7f7f7;
+}
+.index-navbar .pull-left a{
+	margin-right: 8px;
+}
+.index-navbar .pull-right a{
+	margin-left: 8px;
 }
 
 /*功能导航区*/

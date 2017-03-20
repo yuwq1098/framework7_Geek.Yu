@@ -1,5 +1,5 @@
 // 初始化 应用程序 framework7
-var myApp = new Framework7();
+var myApp = new Framework7({});
 
 // 出口选择器引擎定义
 var $$ = Dom7;
@@ -34,7 +34,10 @@ var homeView = myApp.addView('#home', {
 //给个人中心启动动态导航
 var homeView = myApp.addView('#personal', {
     // Because we use fixed-through navbar we can enable dynamic navbar
-    dynamicNavbar: true
+    dynamicNavbar: true,
+    // 禁用侧滑返回效果
+    swipeBackPage: false,
+    swipePanel: 'right',
 });
 
 //给Framework7 demo启动动态导航
@@ -43,13 +46,52 @@ var exampleView = myApp.addView('#example', {
     dynamicNavbar: true
 });
 
-// 回调为特定页面运行特定的代码,例如关于页面:
+// 回调为关于页面运行特定的代码
 myApp.onPageInit('about', function (page) {
     // 链接被点击后运行createContentPage func
     $$('.create-page').on('click', function () {
         createContentPage();
     });
 });
+
+// 回调用户信息页面初始化时触发
+myApp.onPageInit('userinfo', function (page) {
+    var _thisDOM = $$(page.container);
+    // Touch events
+    var isMoved = false,
+        touchesStart = {},
+        touchesMove = {},
+        touchesDiff,
+        touchStartTime;
+    _thisDOM.find(".page-content").on("touchstart",function(e){
+        isTouched = true;
+        touchesStart.x = e.targetTouches[0].pageX || e.pageX;
+        touchesStart.y = e.targetTouches[0].pageY || e.pageY;
+        touchStartTime = (new Date()).getTime();
+
+        $$(this).on("touchmove",function(e){
+            if (!isTouched) return;
+            touchesMove.x = e.targetTouches[0].pageX || e.pageX;
+            touchesMove.y = e.targetTouches[0].pageY || e.pageY;
+        });
+        e.preventDefault();
+    });
+    _thisDOM.find(".page-content").on("touchend",function(e){
+        var moved = {};
+        var touchTime = ((new Date()).getTime()-touchStartTime)/1000;
+        moved.x = touchesMove.x - touchesStart.x;
+        moved.y = touchesMove.y - touchesStart.y;
+        console.log("您花了"+touchTime+"s,移动的结果是：");
+        console.log(moved);
+        if(moved.x<-20){
+            myApp.openPanel('right');
+        }else if(moved.x>20){
+            myApp.openPanel('left');
+        }
+        e.preventDefault();
+    });
+});
+
 
 // 生成动态页面
 var dynamicPageIndex = 0;

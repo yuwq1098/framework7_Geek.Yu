@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <title>My App</title>
+    <title>聚焦牛股</title>
     
     <!-- Path to Framework7 Library CSS-->
     <link rel="stylesheet" href="css/framework7.ios.min.css">
@@ -35,20 +35,28 @@
         <p>侧边栏（右）</p>
       </div>
     </div>
+
     <!-- 视图区-->
-    <!-- Tabs, now tabs wrapper is "views" -->
+    <!-- 页面选项卡,这个选项卡是由“views”包裹 -->
     <div class="views tabs toolbar-fixed">
         <!-- 默认显示首页视图 -->
         <div id="home" class="view tab view-main active" data-page="home">
-            <div class="navbar">
-                <div class="navbar-inner">
-                  <div class="center">首页</div>
-                </div>
-            </div>
-            <div class="pages navbar-fixed">
-                <div data-page="home" class="page">
+            <div class="navbar navbar-hidden"></div>
+            
+            <div class="pages">
+                <div data-page="home" class="page no-navbar">
                     <div class="page-content">
-
+                        <div class="index-navbar">
+                            <div class="navbar-inner">
+                                <div class="pull-left">
+                                    <a href="" class="">发现</a>
+                                    <a href="" class="">关注</a>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="" class="">更多</a>
+                                </div>
+                            </div>
+                        </div>
                         <!-- 滑块容器, 首页广告区  -->
                         <div class="swiper-container">
                             <!-- 幻灯片包 -->
@@ -159,19 +167,15 @@
         <!-- 我的个人中心 -->
         <div id="personal" class="view tab" data-page="personal">
             <!-- 顶部导航条-->
-            <div class="navbar">
-                <div class="navbar-inner">
-                    <!-- 我们家没有留下链接导航-->
-                    <div class="center sliding">个人中心</div>
-                </div>
-            </div>
-            <div class="pages navbar-through">
-                <div data-page="personal" class="page page-on-center">
+            <div class="navbar navbar-hidden"></div>
+            <!-- 不加navbar-through，就是nav穿透，是页面内容与导航条分开，去除则是nav和page-content衔接 -->
+            <div class="pages">
+                <div data-page="personal" class="page no-navbar">
                     <div class="page-content">
                         <div class="list-block media-list info-block">
                             <ul>
                                 <li>
-                                    <a href="pages/userinfo.html" class="item-link item-content">
+                                    <a href="pages/userInfo.html" class="item-link item-content">
                                         <div class="item-media"><img src="img/yuwq-icon.png" class="radius-img"></div>
                                         <div class="item-inner">
                                             <div class="item-title-row">
@@ -234,7 +238,7 @@
                     <div class="right">
                         <!-- Right link contains only icon - additional "icon-only" class-->
                         <a href="#" class="link icon-only open-panel">
-                            <i class="icon iconfont icon-medium icon-leimu"></i>
+                            <i class="icon iconfont size-22 icon-leimu"></i>
                         </a>
                     </div>
                 </div>
